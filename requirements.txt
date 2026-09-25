@@ -1,0 +1,7 @@
+requests
+python-dotenv
+duckdb
+dbt-duckdb
+dagster
+dagster-webserver
+dagster-dbt

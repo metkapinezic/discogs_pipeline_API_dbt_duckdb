@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: discogs_raw
+    schema: discogs
+    tables:
+      - name: raw_label_releases
