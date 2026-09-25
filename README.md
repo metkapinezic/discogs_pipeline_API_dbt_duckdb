@@ -6,16 +6,16 @@ End-to-end data pipeline that ingests the full release catalog of the Tommy Boy 
 
 ```
 Discogs API
-  → extract/ingest.py        (Python, paginated, retries, rate limit aware)
-  → discogs.raw_label_releases (DuckDB, raw JSON, full refresh)
-  → dbt staging              (flatten, cast, dedupe)
-  → dbt marts                (dim_artists)
-  → Dagster                  (asset lineage, weekly schedule)
+  → extract/ingest.py            (Python, paginated, retries, rate limit aware)
+  → discogs.raw_label_releases   (DuckDB, raw JSON, full refresh)
+  → dbt staging                  (flatten, cast, dedupe)
+  → dbt marts                    (dim_artists)
+  → Dagster                      (asset lineage, weekly schedule)
 ```
 
 ## Stack
 
-Python, DuckDB, dbt (dbt-duckdb), Dagster, Discogs API
+Python, DuckDB, dbt, Dagster, Discogs API
 
 ## Project structure
 
