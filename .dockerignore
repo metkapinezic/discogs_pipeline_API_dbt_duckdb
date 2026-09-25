@@ -1,0 +1,6 @@
+.env
+data/
+logs/
+discogs_dbt/target/
+discogs_dbt/logs/
+discogs_dbt/dbt_packages/

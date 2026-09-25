@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: stg_label_releases
+    columns:
+      - name: release_id
+        tests: [not_null]

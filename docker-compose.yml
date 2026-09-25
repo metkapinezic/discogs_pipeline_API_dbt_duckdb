@@ -1,0 +1,18 @@
+services:
+  ingest:
+    build: .
+    env_file: .env
+    environment:
+      DUCKDB_PATH: /duckdb/metka.duckdb        # path inside the container
+    volumes:
+      - /Users/metkap/Dev/DuckDB:/duckdb       # your folder -> /duckdb in the container
+    command: python extract/ingest.py
+
+  dbt:
+    build: .
+    env_file: .env
+    environment:
+      DUCKDB_PATH: /duckdb/metka.duckdb
+    volumes:
+      - /Users/metkap/Dev/DuckDB:/duckdb
+    command: dbt build --project-dir discogs_dbt --profiles-dir discogs_dbt
